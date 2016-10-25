@@ -13,4 +13,20 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+// var stream = client.stream('statuses/filter', {track: 'javascript'});
+// stream.on('data', function(event) {
+//   console.log(event && event.text);
+// });
+//
+// stream.on('error', function(error) {
+//   throw error;
+// });
+
+client.get('statuses/user_timeline', function(req, res, next) {
+  // if(error) throw error;
+  // console.log(tweets);
+  console.log(res);
+  // console.log(response);  // Raw response object.
+});
+
 module.exports = router;
