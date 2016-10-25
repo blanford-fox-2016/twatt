@@ -2,6 +2,12 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    nav.navbar.navbar-inverse
+      .container.text-center
+        .navbar-header
+          a.navbar-brand(href='/') Twatt! Search
+
     block content

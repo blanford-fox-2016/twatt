@@ -4,11 +4,11 @@ let router = express.Router();
 let http = require('http');
 let oauth = require('oauth');
 
-let twitter = require('../controllers/TwitterController.js')
+let ui = require('../controllers/UIController.js')
 
 /* GET home page. */
-router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', ui.home);
+
+router.get('/search', ui.searchTweet);
 
 module.exports = router;

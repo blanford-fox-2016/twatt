@@ -24,7 +24,8 @@ You can insert your Twitter API customer keys and token in `config/config.js` fi
 ├── config
 │   └── config.js
 ├── controllers
-│   └── TwitterController.js
+│   ├── TwitterController.js
+│   └── UIController.js
 ├── helpers
 │   └── oauthTwitter.js
 ├── package.json
@@ -40,7 +41,7 @@ You can insert your Twitter API customer keys and token in `config/config.js` fi
     ├── error.jade
     ├── index.jade
     ├── layout.jade
-    └── user.jade
+    └── search.jade
 ```
 
 
@@ -82,7 +83,17 @@ List off all routes :
 |--------|------|-------------|
 |http://localhost:3000/twatt/home_timeline | GET | Get recent tweets from your home timeline|
 |http://localhost:3000/twatt/my_timeline | GET | Get recent tweets from your timeline|
-|http://localhost:3000/twatt/search/tweet/:your_keyword | GET | Search tweets with a spesific keyword|
+|http://localhost:3000/twatt/search/tweet?q=your_keyword | GET | Search tweets with a spesific keyword|
+
+List of link :
+
+You can access the data via web Interface by opening these link bellow to your web browser.
+
+|  Route | Description |
+|--------|-------------|
+| http://localhost:3000/ | Display the search form |
+| http://localhost:3000/search?q=your_keyword | Display search results with spesific keyword |
+
 
 
 ## Contact
