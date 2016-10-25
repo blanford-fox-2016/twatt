@@ -8,6 +8,6 @@ let twitter = require('../controllers/TwitterController.js')
 
 router.get('/my_timeline', twitter.getUserTimeline)
 router.get('/home_timeline', twitter.getHomeTimeline)
-router.get('/search/tweet/:keyword', twitter.searchTweet)
+router.get('/search/tweet', twitter.searchTweet)
 
 module.exports = router;

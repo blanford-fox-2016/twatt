@@ -19,7 +19,7 @@ module.exports = {
   },
 
   searchTweet: (req, res, next) => {
-    let link = `https://api.twitter.com/1.1/search/tweets.json?q=${req.params.keyword}`;
+    let link = `https://api.twitter.com/1.1/search/tweets.json?q=${req.query.q}`;
 
     AuthTwitter.getData(link, (data) => {
       res.json(JSON.parse(data));
