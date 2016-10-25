@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .container
+    h1= title
+    p #{title}
+    .row
+      form(class="col s12", method="get", action="/")
+        input(type="text", name="q", placeholder="Search twitter here")
+        button(class="waves-effect waves-light btn #4caf50 green") search
+    if typeof show_data_search != "undefined"
+      .row
+        table.striped
+          - for(var i = 0 ; i < show_data_search.statuses.length ; i++)
+            thead
+              tr
+                th(data-field="id") Name: #{show_data_search.statuses[i].user.name} - @#{show_data_search.statuses[i].user.screen_name}
+            tbody
+              tr
+                td #{show_data_search.statuses[i].text}
