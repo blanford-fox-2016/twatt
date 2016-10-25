@@ -6,9 +6,9 @@ var OAuth = require('oauth')
 
 
 /* GET home page. */
-router.get('/oauth/search/:keyword', controller.getSearchOauth);
+router.get('/oauth/search', controller.getSearchOauth);
 
 
-router.get('/twit/search/:keyword', controller.getSearchTwit)
+router.get('/twit/search', controller.getSearchTwit)
 
 module.exports = router;

@@ -66,5 +66,5 @@ module.exports = {
 ```
 
 ## URL Search for Postman
-localhost:3000/oauth/search/KEYWORD
-localhost:3000/twit/search/KEYWORD
+localhost:3000/oauth/search?q=KEYWORD
+localhost:3000/twit/search?q=KEYWORD

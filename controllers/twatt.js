@@ -27,7 +27,7 @@ var test = function (url, cb) {
 
 module.exports = {
     getSearchOauth: function (req, res) {
-        var url = 'https://api.twitter.com/1.1/search/tweets.json?q='+req.params.keyword
+        var url = 'https://api.twitter.com/1.1/search/tweets.json?q='+req.query.q
         test(url, function (data) {
             res.json(JSON.parse(data))
         })
@@ -41,7 +41,7 @@ module.exports = {
             access_token_secret:  auth.twitterAuth.accessTokenSecret,
         })
 
-        T.get('search/tweets', { q: req.params.keyword, count: 100 }, function(err, data, response) {
+        T.get('search/tweets', { q: req.query.q, count: 100 }, function(err, data, response) {
             // console.log(data)
             // res.json(data.statuses[0].text)
             res.json(data)
