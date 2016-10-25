@@ -18,6 +18,11 @@ Username's twitter: [twitter.com/kenduigraha](kenduigraha)
 
 > `curl -X GET "localhost:3000/oauth/search?q={search_here}"`
 
+### Access User Interface
+> `http://localhost:3000`
+
+> `http://localhost:3000?q=hacktiv8`
+
 ### Postman
 
 0. Input the URL
@@ -81,14 +86,23 @@ How to start server :
 ├── app.js
 ├── bin
 │   └── www
+├── controller
+│   ├── apiController.js
+│   └── viewController.js
+├── helper
+│   ├── config.js
+│   └── oauth.js
+├── helpers
+│   ├── config.js
+│   └── oauth.js
 ├── package.json
 ├── public
 │   ├── images
 │   ├── javascripts
 │   └── stylesheets
 ├── routes
-│   ├── index.js
-│   └── users.js
+│   ├── api.js
+│   └── index.js
 └── views
     ├── error.jade
     ├── index.jade
