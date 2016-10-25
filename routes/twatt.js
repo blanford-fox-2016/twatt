@@ -6,9 +6,8 @@ let oauth = require('oauth');
 
 let twitter = require('../controllers/TwitterController.js')
 
-/* GET home page. */
-router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Express' });
-});
+router.get('/my_timeline', twitter.getUserTimeline)
+router.get('/home_timeline', twitter.getHomeTimeline)
+router.get('/search/tweet/:keyword', twitter.searchTweet)
 
 module.exports = router;
