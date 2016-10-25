@@ -23,7 +23,32 @@
 
 }
 ```
-
+#TREE
+```
+├── README.md
+├── app.js
+├── bin
+│   └── www
+├── config
+│   ├── config.js
+│   └── helper.js
+├── controller
+│   ├── api.js
+│   └── controler.js
+├── package.json
+├── public
+│   ├── images
+│   ├── javascripts
+│   └── stylesheets
+├── routes
+│   ├── api.js
+│   └── index.js
+└── views
+    ├── error.ejs
+    ├── error.jade
+    ├── index.ejs
+    └── search.ejs
+```
 #API
 
 ```
@@ -32,17 +57,25 @@ Using oauth Api twitter
 
 Routes | HTTP | Description |
 ------------ | ------------- | ---------|
-/auth | GET |  Get user tweet
+/api/status | GET |  Get user tweet
+/api/search | GET |  Get tag tweet
 
 
-using Api
+#using Api
+
+-timeline (api)
+```
+https://localhost:3000/api/status
+```
+
+-search tweets  (api)
 
 ```
-https://localhost:3000/auth?q="username"
+https://localhost:3000/api/search?q="name"
 ```
 
 example:
 
 ```
-https://localhost:3000/auth?q=ken
+https://localhost:3000/api/search?q=ken
 ```
