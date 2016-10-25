@@ -1,11 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var controller = require('../controller/controller')
+var controller = require('../controller/viewController')
 
-router.get('/oauth/home', controller.getHome)
-
-router.get('/oauth/timeline', controller.getTimeline)
-
-router.get('/oauth/search', controller.search)
+router.get('/', controller.viewSearch)
 
 module.exports = router;

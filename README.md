@@ -6,7 +6,7 @@ Username's twitter: [twitter.com/kenduigraha](kenduigraha)
 
 ## How to check
 
-### User's Timeline
+#### User's Timeline
 
 > `curl -X GET "localhost:3000/oauth/timeline"`
 
@@ -61,15 +61,15 @@ How to start server :
 
 | Route | HTTP | Description|
 |-------|------|------------|
-| `/oauth/home`|GET| Get home's twitter data |
+| `/oauth/home`| GET | Get home's twitter data |
 | `/oauth/timeline`| GET | Get timeline's twitter data |
 
 ## HTTP Request's Example
 
 | Action |Request|
 |---------|-------|
-| Read home's twitter|`curl -X GET "localhost:3000/oauth/home` |
-| Read timeline's twitter|`curl -X GET "localhost:3000/oauth/timeline` |
+| Read home's twitter | `curl -X GET "localhost:3000/oauth/home` |
+| Read timeline's twitter | `curl -X GET "localhost:3000/oauth/timeline` |
 
 ************************************
 
