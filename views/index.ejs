@@ -10,15 +10,33 @@
     <div class="container text-center form-search">
       <h1><%= title %></h1>
       <div>
-        <form class="navbar-form">
+        <form class="navbar-form" method="get" action="/search">
           <div class="input-group add-on">
-            <input type="text" class="form-control" placeholder="Search Keyword">
+            <input type="text" class="form-control" placeholder="Search Keyword" name="q">
             <div class="input-group-btn">
               <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
             </div>
           </div>
         </form>
       </div>
+    </div>
+
+    <div class="container ">
+      <% if (typeof search.statuses != "undefined")  {%>
+        <% for (var i = 0; i < search.statuses.length; i++) { %>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4><%= search.statuses[i].user.name%></h4>
+          </div>
+
+          <div class="panel-body">
+            <%= search.statuses[i].text%>
+          </div>
+        </div>
+
+
+        <% } %>
+      <% } %>
     </div>
 
 

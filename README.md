@@ -78,6 +78,5 @@ module.exports = {
 ## API for Search
 
 ```
-http://localhost:3000/oauth/search?q=KEYWORD
-http://localhost:3000/twit/search?q=KEYWORD
+http://localhost:3000/api/search?q=KEYWORD
 ```
