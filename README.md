@@ -1,35 +1,44 @@
 # twatt
 
 ## Install express
-npm install express-generator
-npm express -e //ejs
-npm install
 
-## Intall Twit Or OAuth
-npm install twit
+```
+npm install express-generator -g
+express --ejs
+npm install
+```
+
+## Intall Twit or OAuth
+
+```
+npm install twit --save
+```
 
 OR
 
-npm install oauth
+```
+npm install oauth --save
+```
 
 ## Twit Usage
+
 ```javascript
 var Twit = require('twit')
- 
+
 var T = new Twit ({
   consumer_key:         CONSUMER_KEY,
   consumer_secret:      CONSUMER_SECRET,
   access_token:         ACCESS_TOKEN,
-  access_token_secret:  ACCESS_TOKEN_SECRET 
+  access_token_secret:  ACCESS_TOKEN_SECRET
 })
-
 
 T.get('search/tweets', { q: 'banana since:2011-07-11', count: 100 }, function(err, data, res) {
   res.json(data)
 })
 ```
 
-## OAUTH Usage
+## OAuth Usage
+
 ```javascript
 var oauth = new OAuth.OAuth(
       'https://api.twitter.com/oauth/request_token',
@@ -43,17 +52,18 @@ var oauth = new OAuth.OAuth(
 
 oauth.get(
       'https://api.twitter.com/1.1/trends/place.json?id=23424977',
-      'your user token for this app', //test user token 
-      'your user secret for this app', //test user secret             
+      'your user token for this app', //test user token
+      'your user secret for this app', //test user secret
       function (e, data, res){
-        if (e) console.error(e);        
+        if (e) console.error(e);
         console.log(require('util').inspect(data));
-        done();      
-      });    
+        done();
+      });
   });
  ```
-  
-## Create config for twitter outh
+
+## Create config for Twitter OAuth
+
 ```javascript
 module.exports = {
         'twitterAuth' : {
@@ -65,6 +75,9 @@ module.exports = {
 }
 ```
 
-## URL Search for Postman
-localhost:3000/oauth/search?q=KEYWORD
-localhost:3000/twit/search?q=KEYWORD
+## API for Search
+
+```
+http://localhost:3000/oauth/search?q=KEYWORD
+http://localhost:3000/twit/search?q=KEYWORD
+```
