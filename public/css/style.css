@@ -29,6 +29,12 @@ footer{
 }
 
 .jumbotron{
-  margin-bottom: 0;
-  background: #ffffff;
+  border: 2px solid #eee;
+  background: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h1{
+  text-align: center;
 }
